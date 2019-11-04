@@ -15,7 +15,7 @@ class Board extends React.Component {
     super(props);
     this.state = {
       squares : Array(9).fill(null),
-      xIsNext: true
+      xIsNext: true,
     };
   }
   handleClick(i){
@@ -36,7 +36,7 @@ class Board extends React.Component {
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X':'O');
 
     return (
       <div>
